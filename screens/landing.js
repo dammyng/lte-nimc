@@ -6,22 +6,22 @@ import { Ionicons } from '@expo/vector-icons';
 const slides = [
     {
         key: 1,
-        title: 'Title 1',
-        text: 'Description.\nSay something cool',
+        title: 'Welcome to Proximity',
+        text: 'Advanced Mobile Identity Ecosystems',
         image: require('../assets/1.png'),
         backgroundColor: '#59b2ab',
     },
     {
         key: 2,
-        title: 'Title 2',
-        text: 'Other cool stuff',
+        title: 'Mobile Identity',
+        text: 'Secure Mobile Identity on a Smartphone',
         image: require('../assets/2.png'),
         backgroundColor: '#febe29',
     },
     {
         key: 3,
-        title: 'Rocket guy',
-        text: 'I\'m already out of descriptions\n\nLorem ipsum bla bla bla',
+        title: 'Get started with your NIN',
+        text: 'Nigeria- National Identification Number',
         image: require('../assets/3.png'),
         backgroundColor: '#22bcb5',
     }

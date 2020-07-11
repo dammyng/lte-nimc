@@ -23,10 +23,10 @@ const Login = (props) => {
                 </View>
                 <View style={{ marginHorizontal: 25, display: "flex", backgroundColor: "#fff", padding: 25, borderRadius: 10, alignContent: "center" }}>
                     <TextInput style={[styles.mv10]} placeholder="Enter your NIN"></TextInput>
-                    <LButton title="Login" onPress={()=>_continue()}>
+                    <LButton title="Login" onPress={() => _continue()}>
                         <BtnText>Continue</BtnText>
                     </LButton>
-                    <Text style={{ fontSize: 11, color: "gray", marginVertical: 8 }} onPress={() => { settoolTipVisible(true) }}>
+                    <Text style={{ fontSize: 11, color: "#e57373", marginVertical: 8 }} onPress={() => { settoolTipVisible(true) }}>
                         How it works
                         </Text>
                 </View>
@@ -35,9 +35,19 @@ const Login = (props) => {
             </View>
             <Tooltip
                 isVisible={toolTipVisible}
-                content={<Text>Check this out!</Text>}
+                content={
+                    <View>
+                        <Text style={{ fontSize: 15, marginVertical: 5, color: "#424242" }}>How it works</Text>
+                        <Text style={{  marginVertical: 5, color: "gray" , textAlign:"justify" }}>Enter your 11 digit NIN - National Identification Number </Text>
+                        <Text  style={{  marginVertical: 5, color: "gray", textAlign:"justify" }}>You would receive an SMS with the verification PIN on the number you provided when registering for your NIN</Text>
+                        <Text  style={{  marginVertical: 5, color: "gray", textAlign:"justify"  }}>Once your phone number is verified, your Mobile ID will automatically be set up on this device</Text>
+
+                    </View>}
                 placement="center"
                 onClose={() => settoolTipVisible(false)}
+                contentStyle={{borderRadius:10, borderWidth:1, borderColor:"lightgray"
+                
+            }}
             ></Tooltip>
         </View>
     );

@@ -19,15 +19,15 @@ const Profile = (props) => {
                     <View style={[styles.section,{ flexDirection: "row", justifyContent: "space-between" }]}>
                         <View style={styles.nameBox}>
                             <Text style={styles.nameLabel}>Last name</Text>
-                            <Text style={styles.names}>Kassim</Text>
+                            <Text style={styles.names}>Proud</Text>
                         </View>
                         <View style={styles.nameBox}>
                             <Text style={styles.nameLabel}>Middle name</Text>
-                            <Text style={styles.names}>Anjola</Text>
+                            <Text style={styles.names}>Nigerian</Text>
                         </View>
                         <View style={styles.nameBox}>
                             <Text style={styles.nameLabel}>First name</Text>
-                            <Text style={styles.names}>Damilola</Text>
+                            <Text style={styles.names}>Citizen</Text>
                         </View>
                     </View>
                     <View style={styles.section}>
