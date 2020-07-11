@@ -17,6 +17,21 @@ const Header = () => {
     );
 }
 
+const M10 = () => {
+    return (
+        <View style={{height:25}}>
+        
+        </View>
+    );
+}
+const B10 = () => {
+    return (
+        <View style={{height:12}}>
+        
+        </View>
+    );
+}
+
 const styles = StyleSheet.create({
     head: {
         display: "flex",
@@ -31,5 +46,5 @@ const styles = StyleSheet.create({
 });
 
 export {
-    Header
+    Header, M10,B10
 }

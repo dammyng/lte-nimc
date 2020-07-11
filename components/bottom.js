@@ -8,7 +8,7 @@ const Footer = (props) => {
         <HView>
             <View style={styles.view} onTouchStart={() => props.switch("setting")}>
                 <Ionicons name="ios-cog" size={30} color="gray" />
-                <IconCaption>Settings</IconCaption>
+                <IconCaption>Options</IconCaption>
             </View>
             <View style={styles.view} onTouchStart={() => props.switch("record")}>
                 <Ionicons name="ios-list" size={30} color="gray" />
@@ -18,7 +18,7 @@ const Footer = (props) => {
                 <Ionicons name="ios-person" size={30} color="gray" />
                 <IconCaption>Profile</IconCaption>
             </View>
-            <View style={styles.view} onTouchStart={() => props.switch("lock")}>
+            <View style={styles.view} onTouchStart={() => props.navigation.navigate('Lock')}>
                 <Ionicons name="ios-card" size={30} color="gray" />
                 <IconCaption>Lock </IconCaption>
             </View>

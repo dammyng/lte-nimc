@@ -6,11 +6,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import { Footer } from './components/bottom.js'
-import { Header } from './components/headers'
+import { Header, M10 ,B10} from './components/headers'
 import { Profile } from './screens/profile'
 import { Lock } from './screens/lock'
 import { Help } from './screens/help'
-import { Settings } from './screens/settings'
+import { Settings } from './screens/options'
 import { Record } from './screens/records'
 
 import { Login } from './screens/login'
@@ -21,7 +21,6 @@ const Page = (props) => {
   return (
     <>
       <Profile active={props.active} />
-      <Lock active={props.active} />
       <Help active={props.active} />
       <Settings active={props.active} />
       <Record active={props.active} />
@@ -29,7 +28,7 @@ const Page = (props) => {
   );
 }
 
-function MainApp() {
+function MainApp(props) {
 
   let [active, setActive] = useState("profile")
   let switcher = (e) => {
@@ -38,10 +37,11 @@ function MainApp() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
+      <M10/>
       <Header />
       <Page active={active} />
-      <Footer switch={(e) => switcher(e)} />
-
+      <Footer switch={(e) => switcher(e)}  navigation = {props.navigation}/>
+      <B10/>
     </View>
   );
 }
@@ -54,10 +54,13 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Land">
-      <Stack.Screen name="Main" component={MainApp} />
-      <Stack.Screen name="Land" component={Landing} />
-      <Stack.Screen name="Login" component={Login} />
+      <Stack.Navigator initialRouteName="Main">
+      <Stack.Screen name="Main" component={MainApp} options={{headerShown:false }} />
+      <Stack.Screen name="Land" options={{headerShown:false }} 
+         component={Landing} />
+           <Stack.Screen name="Lock" options={{headerShown:false }} 
+         component={Lock} />
+      <Stack.Screen name="Login" options={{headerShown:false }}  component={Login} />
       </Stack.Navigator>
 
     </NavigationContainer>
@@ -67,6 +70,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor:"#f5f5f5"
+
   },
 });

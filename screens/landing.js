@@ -35,7 +35,7 @@ const Landing = (props) => {
                 backgroundColor: item.backgroundColor,
               },]}>
                 <Text style={styles.title}>{item.title}</Text>
-                <Image source={item.image} />
+                <Image source={item.image} style={styles.image} />
                 <Text style={styles.text}>{item.text}</Text>
             </View>
         );
@@ -62,12 +62,17 @@ const Landing = (props) => {
             </View>
         );
     };
+    let _onDone = () => {
+       props.navigation.navigate('Login')}
+      
     return (
         <AppIntroSlider
             data={slides}
             renderItem={_renderItem}
             renderDoneButton={() => _renderDoneButton()}
             renderNextButton={() => _renderNextButton()}
+            onDone={() => _onDone()}
+
         />
     )
 }
@@ -87,8 +92,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
       },
       image: {
-        width: 320,
-        height: 320,
+        width: 160,
+        height: 160,
         marginVertical: 32,
       },
       text: {
